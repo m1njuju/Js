@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 1번
+        let name = "홍길동";
+        name = "성춘향";
+
+        // 2번
+        // 1) "Study" = sting
+        // 2) 3040 = number
+        // 3) true = boolean
+        // 4) "False" = string
+        // 5) 302.1 = number
+
+        // 3번
+        // 1) "123"
+        // 2) 123
+        // 3) NaN
+
+        // 4번
+        // 1) 2.5
+        // 2) 0
+        // 3) 6
+        // 4) %
+
+        // 5번
+        // 1) true
+        // 2) true
+        // 3) false
+
+        // 6번
+        // 1) 10과 20 중 큰 수를 출력하는 조건문
+        let x = 10, y =20;
+        if (x<y) {
+            document.write(`${y}이 ${x}보다 큽니다`)
+        }
+        /* 답
+        let num01= 10;
+        let num02 = 20;
+        if (num01>num02) {
+            document.write("<p>"+num01+"</p>")
+        }
+        else {
+            document.write("<p>"+num02+"</p>")
+        }*/
+
+        // 2)
+        let score = 65
+        if (score>=70) {
+            document.write("<p>합격</p>");
+        }
+        else if (score>=60) {
+            document.write("<p>보충수업</p>");
+        }
+        else {
+            document.write("<p>재수강</p>");
+        }
+
+        // 7번
+        // 1) true - 정답:false
+        // 2) true
+        // 3) true
+
+        // 8번
+        let initNum = 1; //while문 사용시 초기값 작성
+        while (initNum<=10) {
+            document.write("<p>"+initNum+"</P>");
+            initNum++;
+        }
+
+        //9번
+        // 1)
+        for (let i=10; i>0; i--) {
+            document.write("<p>"+i+"</P>");
+        }
+
+        // 2)
+        let numArray = [1,2,3,4]
+        for (let num of numArray) {
+            document.write("<p>"+num+"</p>");
+        }
+
+        //3)
+        let flowerArray = ["해바라기","튤립","장미"];
+        for (flower in flowerArray) {
+            document.write("<p>"+flowerArray[flower]+"</p>");
+        }
+
+        // 10번
+        // 1)
+        let countNum =1;
+        while (true) {
+            document.write("<p>"+countNum+"</p>"); // 1출력
+            if (countNum==100) { //위치에 따라 조건이 달라질 수 있다.
+                break;
+            }
+
+            countNum++; //2 값을 1 더함 ~~> 101
+            if (countNum==101) {
+                break;
+            }
+        }
+
+        // 2)
+        for (let i=1;i<=50;i++) {
+
+            if ( i%3==0) {
+                continue;
+            }
+            document.write("<p>"+i+"</p>");
+        }
+    </script>
+</body>
+</html>
