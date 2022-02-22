@@ -156,7 +156,7 @@
         }
         document.write("<p>팩토리얼 : "+fac+"</p>");
 
-        // 4번
+        // 4번 (한 번 더 보기)
         let n =4; // 가로 세로 길이
         let allNum = 1; // 1~ 길이의 제곱까지 1씩 증가할 수
 
@@ -174,34 +174,6 @@
                 document.write("<br>");
             }
         }
-
-        /*
-        let numArray = [
-            [1,2,3,4],
-            [5,6,7,8],
-            [9,10,11,12],
-            [13,14,15,16]
-        ]
-
-        document.write(numArray[0][0]);
-        document.write(numArray[0][1]);
-        document.write(numArray[0][2]);
-        document.write(numArray[0][3]+"<br>");
-
-        document.write(numArray[1][0]);
-        document.write(numArray[1][1]);
-        document.write(numArray[1][2]);
-        document.write(numArray[1][3]+"<br>");
-
-        document.write(numArray[2][0]);
-        document.write(numArray[2][1]);
-        document.write(numArray[2][2]);
-        document.write(numArray[2][3]+"<br>");
-
-        document.write(numArray[3][0]);
-        document.write(numArray[3][1]);
-        document.write(numArray[3][2]);
-        document.write(numArray[3][3]+"<br>");*/
 
         document.write("<h1>조건문과 반복문 혼합</h1>");
         // 1번
@@ -236,8 +208,8 @@
 
         // 4번
         document.write("<br>");
-        for (let i=0; i<5; i++) {
-            for (let j=0; j<5; j++) {
+        for (let i=0; i<5; i++) { // 사각형을 먼저 만들기
+            for (let j=0; j<5; j++) { // 사각형을 만들기 위해서는 이중 for문을 사용
                 if (i >= j) {
                     document.write("* ");
                 }
