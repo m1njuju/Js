@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 1번 문제
+        function lcm(a,b) {
+            let n=1; // 1~n까지 증가시키면서 b와 곱함
+            while(n*b % a !=0) {
+                // 1~a값과 b값을 곱해 a로 나누었을 때 나머지가 0이 아니라면 반복
+                n++; //1씩 증가
+            }
+            return n*b;
+        }
+
+        function lcmRenew(a,b) {
+            let n=1; // 1~n까지 증가시키면서 b와 곱함
+            let lcmNum = 0; // 최소 공배수일 수도 있는 수
+            while(true) {
+                lcmNum = n*b;
+                if(lcmNum % a ==0) {// 나머지가 0이라면 반복문을 나옴
+                //if((n % a ==0)&&(n %b==0)) {
+                break;
+                }
+                n++;//1씩 증가
+            }
+            return lcmNum;
+        }
+
+        // 2번 문제
+        let myProfile = {
+            name: '김개발',
+            address: {
+                email: 'geabal@gmail.com',
+                home: '위워크'
+            },
+            'my favorite': {
+                food: [{
+                    name: '샐러드',
+                    price: 3500
+                },{
+                    name: '삼겹살',
+                    price: 15000
+                }],
+                hobby: ['축구']
+            },
+            /*getAnswer: function() {
+                return this['my favorite']['food'][0]['name'];
+            }*/
+        }
+        function getAnswer(myProfile) {
+            return myProfile['my favorite']['food'][0]['name'];
+        }
+        
+        // 3번 문제
+        function Profile (name,phoneNumber) {
+            this.name = name;
+            this.phoneNumber = phoneNumber;
+            this.calling = function() {
+                return this.name+"에게 전화하고 있습니다";
+            };
+        }
+
+        let profileBook = [];
+
+        profileBook.push(new Profile("Harry", "0543236543"));
+        profileBook.push(new Profile("Sherlock", "0994372684"));
+        profileBook.push(new Profile("John", "0120331254"));
+        
+        for (let i in profileBook) {
+            profileBook[0];
+        }
+    </script>
+</body>
+</html>

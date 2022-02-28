@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 1번 문제
+        // (3) function test() => { console.log("테스트 함수입니다.")}
+
+        // 2번 문제
+        let test = function() { console.log("테스트 함수입니다.")};
+
+        // 3번 문제
+        // 1)
+        let add = (a,b) => a+b; // return값으로 출력
+        //2)
+        let messageAlert = () => {alert("화살표식 함수로 바꿨습니다")};
+
+        // 4번 문제
+        function PlusPlus(n) {
+            if(n==0) {
+                return 0;
+            }
+            else {
+                return n += PlusPlus(n-1);
+            }
+        }
+
+        // 5번 문제
+        // (2) -> 오답
+        // 정답(4) 함수의 인자 값으로 함수를 보낼 때 함수이름()로 보내야 한다
+
+        // 6번 문제
+        let myDog = {
+            name: "Happy",
+            friends: ["Mini", "Choco"],
+            //bark: "bow-wow"
+        };
+        myDog.bark = function () {
+            console.log("bow-wow");
+        };
+        //console.log(myDog.bark);
+
+        // 7번 문제
+        let book = {
+            title: "Nature of Code",
+            pay: "30000원",  //단위
+            author: "다니엘 쉬프만",
+            ISBN: "9788968481901",
+            page: "620페이지" //단위 -단위를 뺀다면 숫자형으로
+        };
+
+        // 8번 문제
+        // 마트에서 계산 100g당 얼마
+        // weight가 항상 100으로 들어오지 않는다고 가정
+        // 100g 당 pay값을 구하기 : pay / weight * 100
+        function Product(name,weight,pay) {
+            this.name = name;
+            this.weight = weight;
+            this.pay = pay;
+            this.caculate = function(g) { //들고 온 무게
+                return g*(Math.round(this.pay/this.weight*100)); //들고 온 무게와 금액 계산
+            }
+            /*this.calculate = function(Plusweight) {
+                return `${ this.price *= Plusweight/100}원`; 
+            }*/
+        }
+        let myProduct = new Product("돼지삼겹살",100,1690);
+    </script>
+</body>
+</html>

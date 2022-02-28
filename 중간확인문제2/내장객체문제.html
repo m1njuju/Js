@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 1번 문제
+        function printCenter(n) {
+            let length = n.length;
+            if(length%2==0) {
+                return n.slice(length/2-1,length/2+1);
+            }
+            else {
+                return n.charAt(Math.floor(n.length/2));
+            }
+        }
+
+        // 2번 문제
+        let quizArray = [
+            {quiz:"왕이 넘어지면",
+            answer:"킹콩"},
+            {quiz:"왕이 넘어지면",
+            answer:"킹콩"},
+            {quiz:"왕이 넘어지면",
+            answer:"킹콩"},
+            {quiz:"왕이 넘어지면",
+            answer:"킹콩"},
+        ];
+
+        function randomQuiz(quizArray,n) {
+            for (let i=0;i<n;i++) {
+                let random = Math.random(quizArray.quiz)*n+1;
+                let user = prompt(quizArray.quiz);
+            }
+            let correct = 0;
+            let incorrect =0;
+            if (user==answer) {
+                console.log("총 "+n+"문제 중"+n+"개 맞혔습니다");
+            }
+            else {
+                console.log("총 "+n+"문제 중"+n-1+"개 맞혔습니다");
+            }
+
+        }
+    </script>
+</body>
+</html>

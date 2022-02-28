@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 함수 1번 문제
+        function power(n,m) {  
+            if (m) {// m = 4 값이 있을 때 true
+                let pow = 1;
+                for(let i=0; i<m; i++) {
+                    pow *= n; // n*n*n
+                    //n = n*n >> 2*2 => 4 >> 4*4
+                }
+                return pow;
+            }
+            else { // m == undefined
+                return n*n;
+            }
+        }
+
+        // 2번 문제
+        let multiply = function(...num) {// ...a 나머지매개변수, arguments
+            let mult =1;
+            for (let n of num) {
+                mult *=n;
+            }
+            return mult;
+        };
+        /*let multiply = function() { 
+            let result = 1;
+            for ( let i=0; i<arguments.length;i++) {
+                result *= arguments[i];
+            }
+            return result;
+        };*/
+
+        // 3번 문제
+        function meetAt(year, month, day) {
+            if(month == undefined) {
+                // year값이 있고, month와 day값이 없다
+                return year+"년";
+            }
+            else if(day == undefined) {
+                // year값이 있고, month의 값이 있는지 없는지 모른다.
+                return `${year}년 ${month}월`;
+            }
+            else {
+                // 그외 year와 month와 day의 값이 있음
+                return `${year}/${month}/${day}`;
+            }
+        }
+        /*function meetAt(year, month, day) {
+            if(day) {
+                return `${year}/${month}/${day}`;
+            }
+            else if(month) {
+                return `${year}년 ${month}월`;
+            }
+            else {
+                return year+"년";
+            }
+        }*/
+        console.log(meetAt(2022));
+        console.log(meetAt(2032, 3));
+        console.log(meetAt(1987, 10, 28));
+
+        // 객체 1번 문제
+        const myStorage = {
+            car: {
+                inside: {
+                    gloveBox: "maps",
+                    passengerSeat: "crumbs"
+                },
+                outside: {trunk:"jack"}
+            }
+        };
+        console.log(myStorage.car.inside.gloveBox);
+
+        // 2번 문제
+        function Product(name,pay) {
+            this.name = name;
+            this.pay = pay;
+            this.keep = function() {
+                return this.name+"을 보관했습니다";
+            };
+            this.getPay = function() {
+                return this.pay;
+            };
+        }
+        let myProduct1 = new Product("book",6000);
+        let myProduct2 = new Product("pencil",2000);
+        let myProduct3 = new Product("hat",8000);
+
+        // 3번 문제
+        function User(id,money) {
+            this.id = id;
+            this.money = money;
+            this.buyList = [];
+            this.charge = function(plusMoney) {
+                return this.money += plusMoney;
+            };
+            this.buy = function(product) {
+                this.money -= product.getPay();
+                this.buyList.push(product.name);
+            };
+        }
+        let user1 = new User ("Harry", 10000);
+    </script>
+</body>
+</html>
