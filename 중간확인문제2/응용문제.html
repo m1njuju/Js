@@ -69,9 +69,11 @@
 
         let profileBook = [];
 
-        profileBook.push(new Profile("Harry", "0543236543"));
-        profileBook.push(new Profile("Sherlock", "0994372684"));
-        profileBook.push(new Profile("John", "0120331254"));
+        profileBook.push(new Profile("Harry", 0543236543));
+        // profileBook[0] = new Profile("Harry", "0543236543") 동일
+        // let myProfile = new Profile("Harry", "0543236543") 와 같은 형식
+        profileBook.push(new Profile("Sherlock", 0994372684));
+        profileBook.push(new Profile("John", 0120331254));
         
         for (let i in profileBook) {
             profileBook[0];
