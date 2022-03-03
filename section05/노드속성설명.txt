@@ -1,0 +1,3 @@
+createAttribute 한번 사용한 속성값은 다른 곳에 추가 불가
+->  cloneNode(true/false)로 복제해서 사용
+
