@@ -28,7 +28,7 @@ function memoFormSubmit(event) {
     //memoBoard에 요소 추가
     memoBoard.appendChild(memo);
     //추가된 memo 요소에 html값 추가
-    memo.innerHTML = memoInput.value; //사용자 입력된 값
+    memo.innerHTML = memoInput.value + "<br>"+getClock(); 
     memoInput.value = ""; //문자열
     console.dir(memoInput);
     memoInput.autofocus = true;
