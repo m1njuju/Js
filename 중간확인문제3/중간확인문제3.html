@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // BOM
+        // 1번 : window객체
+
+        // 2번 : 적지 않아도 된다
+
+        // 3번 : 아래의 코드는 바로 실행된다.
+        //타이머 함수는 백그라운드에 저장되어있다 시간이 되면 호출 스택에서 실행
+
+        // DOM
+        // 1번 : html
+
+        // 2번 : window객체
+        document >> window.document
+
+        // 3번 : 루트요소 - html  왼쪽 요소 - head  왼쪽 밑 요소 - title
+        // 오른쪽 요소 - body 밑에 h1과 p
+
+        // DOM을 찾기 위한 document.querySelector
+        // 1번 
+        document.querySelector("#id_name");
+
+        // 2번
+        document.querySelector(".class_name");
+
+        //DOM과 Node
+        // 1번 : ul태그
+
+        // 2번 : <li><a href="#">메뉴2</a></li>
+
+        // 2-1번 : text 
+
+        // 3번 : <a>태그와 href의 속성 노드 ('메뉴1' 텍스트 노드)가 childNodes이다 ->오답
+        //정답 - 요소노드만: <a href="#">메뉴1</a>
+        
+        // 3-1번 : (href의 속성 노드)와 '메뉴1'의 텍스트 노드를 가지고 있음 - 오답
+        //정답 - 텍스트 노드만: 메뉴1
+
+        // Node 제어 및 관리
+        // 1번 : <p></p> 태그를 생성할 수 있음
+
+        // 2번 : value가 "반갑습니다"인 text node를 생성
+        // 정답 : 텍스트 노드 - text : 반갑습니다
+
+        // 3번 : class 속성의 속성 노드가 생성
+
+        // 3-1번 
+        let attr = document.createAttribute("class");
+        attr.value = "";
+        node.setAttributeNode(attr);
+
+        // 4번 : style속성 노드를 만들어 해당 노드 요소 value의 값을 빨간색으로 나타낼 수 있음
+        // 정답 - 속성이 style = 'color:red'를 추가할 수 있다 글자색을 빨간색으로 바꿀 수 있다
+
+        //이벤트
+        // 1번: 웹브라우저가 알려주는 html 요소가 js에 의해 사건이 발생하는 것
+        // 정답 - 이벤트란 : html의 DOM에게 어떠한 상황(click, mouseover)와 같은 일
+        //        역할 : 이 이벤트가 일어났을 때 JS에 알려준다.
+
+        // 2번
+        // 1) <button type="button" onclick="myFunction()">  onclick="함수()"
+        // 2) .addEventListener("click",함수)
+        이벤트객체.addEventListener("click",myFunction);
+
+        // 3번 - 그림판 참고
+
+        // 4번
+        const menu = document.querySelector("#menu");
+        menu.setAttribute("class","hidden");
+
+        // 5번
+        
+    </script>
+</body>
+</html>
